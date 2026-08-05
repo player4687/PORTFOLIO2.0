@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts Import -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
+    
+    <!-- Design System Styles -->
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="Services.css">
+    
+    <title>Services & Digital Solutions | Ratnadeep.dev</title>
+</head>
+<body>
+    
+    <!-- Reusable Canvas for 3D Geometry Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="Home.html" class="logo">
+                Ratnadeep<span>.dev</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Project.html">Projects</a></li>
+                <li><a href="Skills.html">Skills</a></li>
+                <li><a href="Services.html" class="active">Services</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+
+            <button class="menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <main class="services-page-wrapper">
+        
+        <!-- SECTION 1: SERVICES HERO & GRID -->
+        <section class="services-section">
+            <div class="services-container">
+                
+                <div class="section-header">
+                    <span class="badge">🚀 Agency Quality</span>
+                    <h1 class="section-title">Services</h1>
+                    <p class="section-subtitle">
+                        Helping businesses, creators, and individuals turn ideas into powerful digital solutions.
+                    </p>
+                </div>
+
+                <!-- Dynamic Target Grid (Rendered by Services.js) -->
+                <div class="services-grid" id="services-grid">
+                    <!-- Cards injected dynamically -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 2: WHO I WORK WITH -->
+        <section class="target-audience-section">
+            <div class="services-container">
+                <div class="section-header">
+                    <h2 class="section-title">Who I Work With</h2>
+                    <p class="section-subtitle">Tailored technology solutions built for your specific stage and industry.</p>
+                </div>
+
+                <div class="audience-grid">
+                    <div class="audience-card">
+                        <span class="audience-icon">🏢</span>
+                        <h3>Small Businesses</h3>
+                        <p>Professional websites that build trust, rank higher, and attract local customers.</p>
+                    </div>
+
+                    <div class="audience-card">
+                        <span class="audience-icon">💪</span>
+                        <h3>Gyms & Fitness Clubs</h3>
+                        <p>Interactive membership pages, class schedules, pricing tiers, and contact forms.</p>
+                    </div>
+
+                    <div class="audience-card">
+                        <span class="audience-icon">🎥</span>
+                        <h3>Creators & Influencers</h3>
+                        <p>Sleek portfolio sites, media kits, custom links, and personal brand experiences.</p>
+                    </div>
+
+                    <div class="audience-card">
+                        <span class="audience-icon">🌱</span>
+                        <h3>Startups</h3>
+                        <p>High-converting landing pages, fast MVPs, and modern product showcases.</p>
+                    </div>
+
+                    <div class="audience-card">
+                        <span class="audience-icon">🤖</span>
+                        <h3>Communities</h3>
+                        <p>Custom Discord moderation bots, automated ticketing, and server integrations.</p>
+                    </div>
+
+                    <div class="audience-card">
+                        <span class="audience-icon">⚙️</span>
+                        <h3>Innovators</h3>
+                        <p>Custom IoT, embedded systems, ESP32 telemetry, and physical hardware prototypes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: WHY WORK WITH ME -->
+        <section class="why-section">
+            <div class="services-container">
+                <div class="section-header">
+                    <h2 class="section-title">Why Work With Me?</h2>
+                    <p class="section-subtitle">Combining engineering precision with agency-grade UI/UX execution.</p>
+                </div>
+
+                <div class="why-grid">
+                    <div class="why-card">
+                        <div class="why-icon">⚡</div>
+                        <h3>Fast Communication</h3>
+                        <p>Direct contact with zero middleman delays. Quick status updates and transparent feedback cycles.</p>
+                    </div>
+
+                    <div class="why-card">
+                        <div class="why-icon">🧹</div>
+                        <h3>Clean Code</h3>
+                        <p>Scalable, well-structured, and maintainable codebases built to industry standards.</p>
+                    </div>
+
+                    <div class="why-card">
+                        <div class="why-icon">🎨</div>
+                        <h3>Modern Design</h3>
+                        <p>Sleek glassmorphism visuals, smooth animations, and user-centric UI/UX architectures.</p>
+                    </div>
+
+                    <div class="why-card">
+                        <div class="why-icon">💡</div>
+                        <h3>Continuous Learning</h3>
+                        <p>Constantly staying ahead of modern frontend trends, automation frameworks, and IoT hardware.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: DEVELOPMENT PROCESS TIMELINE -->
+        <section class="process-section">
+            <div class="services-container">
+                <div class="section-header">
+                    <h2 class="section-title">Development Process</h2>
+                    <p class="section-subtitle">A structured 6-step blueprint ensuring project success from concept to launch.</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3>Understand Requirements</h3>
+                            <p>Analyzing goals, target audiences, technical needs, and project scope.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3>Research & Planning</h3>
+                            <p>Designing architecture, selecting tech stacks, and mapping user flows.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3>Design & Wireframing</h3>
+                            <p>Drafting modern layouts, visual elements, animations, and interactive concepts.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h3>Development</h3>
+                            <p>Writing clean, efficient, and responsive code according to specifications.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="step-number">05</div>
+                        <div class="step-content">
+                            <h3>Testing & Refinement</h3>
+                            <p>Rigorous cross-browser testing, mobile responsiveness, and bug fixing.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="step-number">06</div>
+                        <div class="step-content">
+                            <h3>Deployment & Handoff</h3>
+                            <p>Launching live, setting up hosting, and providing post-launch support.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: FINAL CTA -->
+        <section class="cta-section">
+            <div class="services-container">
+                <div class="cta-card">
+                    <h2>Let's Build Something Amazing Together.</h2>
+                    <p>
+                        Whether you need a modern website, an automation solution, or a custom technology project, 
+                        I'm ready to help bring your ideas to life.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="Contact.html" class="btn primary-btn magnetic-btn">Start a Project 🚀</a>
+                        <a href="Contact.html" class="btn secondary-btn magnetic-btn">Let's Connect</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Background Particle Script -->
+    <script src="Home.js"></script>
+    <!-- Services Engine Script -->
+    <script src="Services.js"></script>
+</body>
+</html>

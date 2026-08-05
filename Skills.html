@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts Import -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
+    
+    <!-- Design System Styles -->
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="Skills.css">
+    
+    <title>Skills & Tech Stack | Ratnadeep.dev</title>
+</head>
+<body>
+    
+    <!-- Reusable Animated Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Fixed Glassmorphism Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="Home.html" class="logo">
+                Ratnadeep<span>.dev</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Project.html">Projects</a></li>
+                <li><a href="Skills.html" class="active">Skills</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+
+            <button class="menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard Section -->
+    <main class="skills-page-wrapper">
+        <section class="skills-section">
+            <div class="skills-container">
+                
+                <!-- Section Header -->
+                <div class="section-header">
+                    <h1 class="section-title">Skills</h1>
+                    <p class="section-subtitle">
+                        The technologies, tools, and platforms I use to build modern digital experiences.
+                    </p>
+                </div>
+
+                <!-- Interactive Dashboard Controls: Search Bar & Filters -->
+                <div class="dashboard-controls">
+                    <div class="search-box">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="skill-search" placeholder="Search any technology (e.g. Python, ESP32, Figma)..." autocomplete="off" />
+                    </div>
+
+                    <div class="filter-container">
+                        <button class="filter-btn active" data-filter="all">✨ All</button>
+                        <button class="filter-btn" data-filter="frontend">💻 Frontend</button>
+                        <button class="filter-btn" data-filter="backend">⚙️ Backend</button>
+                        <button class="filter-btn" data-filter="bots">🤖 Automation & Bots</button>
+                        <button class="filter-btn" data-filter="hardware">🔧 Hardware & IoT</button>
+                        <button class="filter-btn" data-filter="tools">🛠 Tools</button>
+                    </div>
+                </div>
+
+                <!-- Dynamic Grid Render Target -->
+                <div class="skills-grid" id="skills-grid">
+                    <!-- Cards dynamically rendered by Skills.js -->
+                </div>
+
+                <!-- Empty Search Fallback State -->
+                <div class="no-results hide" id="no-results">
+                    <p>No matching technology found. Try searching for something else!</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Popup for Skill Deep Dive -->
+    <div class="modal-overlay hide" id="skill-modal">
+        <div class="modal-card">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <div class="modal-header">
+                <span class="modal-icon" id="modal-icon">💻</span>
+                <div>
+                    <h2 class="modal-title" id="modal-title">Skill Title</h2>
+                    <span class="modal-category" id="modal-category">Category</span>
+                </div>
+            </div>
+            
+            <p class="modal-description" id="modal-description">Detailed description goes here.</p>
+            
+            <div class="modal-section">
+                <h4>Experience Level</h4>
+                <p id="modal-experience">2+ Years</p>
+            </div>
+
+            <div class="modal-section">
+                <h4>Used in Projects</h4>
+                <div class="modal-tags" id="modal-projects">
+                    <!-- Dynamic project tags -->
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h4>Related Technologies</h4>
+                <div class="modal-tags" id="modal-related">
+                    <!-- Dynamic tech tags -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Animation Script -->
+    <script src="Home.js"></script>
+    <!-- Skills Engine Script -->
+    <script src="Skills.js"></script>
+</body>
+</html>

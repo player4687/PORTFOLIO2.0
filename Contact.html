@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("_1ctC0EyIjv5tN2xQ");
+       })();
+    </script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="Contact.css">
+    
+    <title>Contact & Collaboration | Ratnadeep.dev</title>
+</head>
+<body>
+    
+    <!-- Particle Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="Home.html" class="logo">
+                Ratnadeep<span>.dev</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Project.html">Projects</a></li>
+                <li><a href="Skills.html">Skills</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Contact.html" class="active">Contact</a></li>
+            </ul>
+
+            <button class="menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Main Contact Page Wrapper -->
+    <main class="contact-page-wrapper">
+        <section class="contact-section">
+            <div class="contact-container">
+                
+                <!-- Main Header -->
+                <header class="section-header">
+                    <div class="status-pills">
+                        <span class="pill status-pill"><span class="pulse-dot"></span> Available for new opportunities</span>
+                        <span class="pill response-pill">⚡ Response time: ~24 hrs</span>
+                    </div>
+                    <h1 class="section-title">Let's Build Something Amazing Together</h1>
+                    <p class="section-subtitle">
+                        Have an idea, project, or collaboration in mind? I'd love to hear from you.
+                    </p>
+                </header>
+
+                <!-- Two Column Dashboard Layout -->
+                <div class="contact-grid">
+                    
+                    <!-- LEFT COLUMN: Interactive Direct Channels & Photo Gallery -->
+                    <div class="contact-channels">
+                        
+                        <!-- Email Card -->
+                        <div class="channel-card copyable" data-copy="duodevelopers333@gmail.com">
+                            <div class="card-glow"></div>
+                            <div class="card-icon">📧</div>
+                            <div class="card-info">
+                                <span class="card-label">Email</span>
+                                <span class="card-value">duodevelopers333@gmail.com</span>
+                            </div>
+                            <button class="action-btn copy-btn" title="Copy Email">
+                                <span class="btn-text">Copy</span>
+                            </button>
+                        </div>
+
+                        <!-- Discord Card -->
+                        <div class="channel-card copyable" data-copy="herobrine_scord">
+                            <div class="card-glow"></div>
+                            <div class="card-icon">💬</div>
+                            <div class="card-info">
+                                <span class="card-label">Discord</span>
+                                <span class="card-value">herobrine_scord</span>
+                            </div>
+                            <button class="action-btn copy-btn" title="Copy Username">
+                                <span class="btn-text">Copy</span>
+                            </button>
+                        </div>
+
+                        <!-- GitHub Card -->
+                        <div class="channel-card">
+                            <div class="card-glow"></div>
+                            <div class="card-icon">💻</div>
+                            <div class="card-info">
+                                <span class="card-label">GitHub</span>
+                                <span class="card-value">@player4687</span>
+                            </div>
+                            <a href="https://github.com/player4687" target="_blank" rel="noopener" class="action-btn link-btn">
+                                <span>Profile ↗</span>
+                            </a>
+                        </div>
+
+                        <!-- Instagram Card -->
+                        <div class="channel-card">
+                            <div class="card-glow"></div>
+                            <div class="card-icon">📸</div>
+                            <div class="card-info">
+                                <span class="card-label">Instagram</span>
+                                <span class="card-value">@MrPenguin.DevMEI</span>
+                            </div>
+                            <a href="https://instagram.com/MrPenguin.Dev" target="_blank" rel="noopener" class="action-btn link-btn">
+                                <span>Follow ↗</span>
+                            </a>
+                        </div>
+
+                        <!-- Twitter / X Card -->
+                        <div class="channel-card">
+                            <div class="card-glow"></div>
+                            <div class="card-icon">𝕏</div>
+                            <div class="card-info">
+                                <span class="card-label">X (Twitter)</span>
+                                <span class="card-value">@PenguinDevX</span>
+                            </div>
+                            <a href="https://x.com/PenguinDevX" target="_blank" rel="noopener" class="action-btn link-btn">
+                                <span>Follow ↗</span>
+                            </a>
+                        </div>
+
+                        <!-- YouTube Card -->
+                        <div class="channel-card">
+                            <div class="card-glow"></div>
+                            <div class="card-icon">🎥</div>
+                            <div class="card-info">
+                                <span class="card-label">YouTube</span>
+                                <span class="card-value">@PenguinDEVx</span>
+                            </div>
+                            <a href="https://youtube.com/@PenguinDEVx" target="_blank" rel="noopener" class="action-btn link-btn">
+                                <span>Watch ↗</span>
+                            </a>
+                        </div>
+
+                        <!-- 📸 FULL-WIDTH PHOTO GALLERY PANEL -->
+                        <div class="photo-gallery-card">
+                            <div class="gallery-header">
+                                <span class="showcase-label">Behind the Scenes</span>
+                            </div>
+                            <div class="gallery-grid">
+                                <div class="photo-frame">
+                                    <img src="photo1.jpeg" alt="Ratnadeep Setup / Work">
+                                    <div class="photo-overlay"><span>Workspace</span></div>
+                                </div>
+                                <div class="photo-frame">
+                                    <img src="photo2.jpeg" alt="Ratnadeep Profile / Portrait">
+                                    <div class="photo-overlay"><span>Developer</span></div>
+                                </div>
+                                <div class="photo-frame">
+                                    <img src="photo3.jpeg" alt="Ratnadeep Projects / Creative">
+                                    <div class="photo-overlay"><span>Projects</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- RIGHT COLUMN: SaaS Form Panel -->
+                    <div class="form-wrapper">
+                        <div class="form-card">
+                            <div class="form-header">
+                                <h2>Project Planner</h2>
+                                <p>Fill out the parameters below to initiate a discussion.</p>
+                            </div>
+
+                            <form id="contact-form" autocomplete="off">
+                                <div class="form-row">
+                                    <div class="input-group">
+                                        <label for="name">Full Name</label>
+                                        <input type="text" id="name" name="name" placeholder="John Doe" required />
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="input-group">
+                                        <label for="project-type">Project Type</label>
+                                        <select id="project-type" name="project_type" required>
+                                            <option value="" disabled selected>Select category...</option>
+                                            <option value="website">Website Development</option>
+                                            <option value="redesign">Website Redesign</option>
+                                            <option value="discord-bot">Discord Bot / Automation</option>
+                                            <option value="iot">IoT / Hardware System</option>
+                                            <option value="landing">Landing Page</option>
+                                            <option value="custom">Custom Solution</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="budget">Budget (Optional)</label>
+                                        <select id="budget" name="budget">
+                                            <option value="Not Specified" selected>Select range...</option>
+                                            <option value="<500">&lt; $500</option>
+                                            <option value="500-1500">$500 - $1,500</option>
+                                            <option value="1500-3000">$1,500 - $3,000</option>
+                                            <option value="3000+">$3,000+</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="input-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, timeline, or key objectives..." required></textarea>
+                                </div>
+
+                                <button type="submit" class="submit-btn" id="submit-btn">
+                                    <span class="btn-ripple"></span>
+                                    <span class="btn-label">Send Message 🚀</span>
+                                </button>
+                                
+                                <div class="form-status" id="form-status"></div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Bottom Banner Callout -->
+        <section class="bottom-cta-banner">
+            <div class="banner-content">
+                <h2>Let's create something people will remember.</h2>
+            </div>
+        </section>
+    </main>
+
+    <!-- PREMIUM FLOATING DOCK (Bottom Right) -->
+    <div class="quick-dock-container" id="quick-dock">
+        <div class="dock-menu" id="dock-menu">
+            <a href="mailto:duodevelopers333@gmail.com" class="dock-item" title="Send Email">
+                <span>📧</span> <span class="dock-tooltip">Email</span>
+            </a>
+            <a href="https://discord.com" target="_blank" class="dock-item" title="Discord (herobrine_scord)">
+                <span>💬</span> <span class="dock-tooltip">Discord</span>
+            </a>
+            <a href="https://github.com/player4687" target="_blank" class="dock-item" title="GitHub">
+                <span>💻</span> <span class="dock-tooltip">GitHub</span>
+            </a>
+            <a href="https://instagram.com/MrPenguin.DevMEI" target="_blank" class="dock-item" title="Instagram">
+                <span>📸</span> <span class="dock-tooltip">Instagram</span>
+            </a>
+            <a href="https://x.com/PenguinDevX" target="_blank" class="dock-item" title="Twitter / X">
+                <span>𝕏</span> <span class="dock-tooltip">Twitter / X</span>
+            </a>
+        </div>
+        <button class="dock-trigger" id="dock-trigger" aria-label="Toggle Quick Contact Menu">
+            <span class="dock-icon">💬</span>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="Home.js"></script>
+    <script src="Contact.js"></script>
+</body>
+</html>

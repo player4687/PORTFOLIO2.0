@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="Project.css">
+
+    <title>Projects Showcase | Ratnadeep.dev</title>
+</head>
+<body>
+
+    <!-- Particle Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="Home.html" class="logo">
+                Ratnadeep<span>.dev</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Project.html" class="active">Projects</a></li>
+                <li><a href="Skills.html">Skills</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+
+            <button class="menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Main Projects Wrapper -->
+    <main class="projects-page-wrapper">
+        <section class="projects-section">
+            <div class="projects-container">
+
+                <!-- Section Header -->
+                <header class="section-header">
+                    <span class="pill status-pill">🚀 Portfolio & Case Studies</span>
+                    <h1 class="section-title">Featured Creations</h1>
+                    <p class="section-subtitle">
+                        Explore web platforms, automated Discord bots, and smart IoT hardware systems built with clean code and modern architectures.
+                    </p>
+
+                    <!-- Filter + Search Controls -->
+                    <div class="controls-bar">
+                        <div class="project-filters filter-container">
+                            <button class="filter-btn active" data-filter="all">All Projects</button>
+                            <button class="filter-btn" data-filter="web">Websites</button>
+                            <button class="filter-btn" data-filter="bot">Discord Bots</button>
+                            <button class="filter-btn" data-filter="iot">IoT / Hardware</button>
+                        </div>
+
+                        <!-- Live search: matches project titles and tech stack -->
+                        <div class="search-wrap">
+                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="7"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                            <input
+                                type="text"
+                                class="search-input"
+                                placeholder="Search by title or tech (e.g. Node.js, ESP32)…"
+                                aria-label="Search projects"
+                            >
+                            <button type="button" class="search-clear" aria-label="Clear search">✕</button>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Projects Grid Container (populated dynamically by Project.js) -->
+                <div class="projects-grid">
+                    <!-- Cards are rendered from projectsData in Project.js -->
+                </div>
+
+                <!-- Empty State: shown when a filter/search returns zero results -->
+                <div class="empty-state" hidden>
+                    <div class="empty-icon">🔍</div>
+                    <h3>No projects found</h3>
+                    <p>Try a different search term or switch back to All Projects.</p>
+                    <button type="button" class="empty-reset">Reset filters</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Blog Preview Modal (populated dynamically when "View Blog" is clicked) -->
+    <div class="blog-modal-overlay"></div>
+
+    <!-- Scripts -->
+    <script src="Home.js"></script>
+    <script src="Project.js"></script>
+</body>
+</html>

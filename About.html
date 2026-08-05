@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratnadeep | About Me</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="About.css">
+</head>
+<body>
+
+    <!-- Glassmorphism Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="Home.html" class="logo">
+                Ratnadeep<span>.dev</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html" class="active">About</a></li>
+                <li><a href="Project.html">Projects</a></li>
+                <li><a href="Skills.html">Skills</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+
+            <button class="menu-btn">
+                ☰
+            </button>
+        </div>
+    </nav>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+        <!-- Canvas for About Page Background -->
+        <canvas id="about-bg-canvas"></canvas>
+
+        <div class="about-container">
+            
+            <!-- Header -->
+            <div class="section-header">
+                <span class="sub-title">// MY STORY</span>
+                <h2>About <span>Me</span></h2>
+            </div>
+
+            <!-- Main Bio Card -->
+            <div class="about-hero-card glass-panel">
+                <h3>I'm <strong>Ratnadeep</strong>, I build web apps, automate workflows with Discord bots, and tinker with hardware.</h3>
+                <p>
+                    I got into tech purely out of curiosity: taking things apart, figuring out how they work under the hood, and breaking code until I fixed it. That curiosity eventually turned into building real, functioning software from scratch.
+                </p>
+                <p>
+                    Most of my time goes into full-stack web development, crafting clean, responsive interfaces and reliable backends. When I’m not writing web apps, I’m usually building custom Discord bots for online communities or wiring up microcontrollers and sensors for IoT projects.
+                </p>
+                <p>
+                    For me, every project is a chance to pick up a new framework, solve a weird bug, and sharpen my skills.
+                </p>
+            </div>
+
+            <!-- What I Do Grid -->
+            <div class="what-i-do-grid">
+                <div class="card glass-panel">
+                    <div class="card-icon">💻</div>
+                    <h4>Web Development</h4>
+                    <p>Building clean, responsive websites and web apps that look great and actually perform well under the hood.</p>
+                </div>
+
+                <div class="card glass-panel">
+                    <div class="card-icon">⚙️</div>
+                    <h4>Hardware & IoT</h4>
+                    <p>Hooking up microcontrollers, wiring sensors, and writing code that interacts with the physical world.</p>
+                </div>
+
+                <div class="card glass-panel">
+                    <div class="card-icon">🚀</div>
+                    <h4>Problem Solving</h4>
+                    <p>Turning rough ideas into working code through quick prototyping, debugging, and experimentation.</p>
+                </div>
+            </div>
+
+            <!-- Personal Note & Closing Impact Banner -->
+            <div class="about-footer-grid">
+                <div class="glass-panel personal-box">
+                    <h4>Beyond Coding</h4>
+                    <p>
+                        When I'm AFK, I'm usually reading up on new tech trends, exploring hardware gear, or experimenting with new tools for my setup.
+                    </p>
+                </div>
+
+                <div class="glass-panel quote-box">
+                    <div class="quote-symbol">💡</div>
+                    <p class="quote-text">
+                        "Good software isn't just about syntax, it's about building tools that solve real problems."
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- JavaScript Files -->
+    <script src="About.js" defer></script>
+</body>
+</html>

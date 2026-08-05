@@ -1,0 +1,346 @@
+/* ==========================================
+   SKILLS DASHBOARD PAGE STYLES
+   ========================================== */
+
+.skills-page-wrapper {
+    padding-top: 140px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.skills-section {
+    padding: 20px 20px 80px;
+    color: #ffffff;
+    font-family: 'Lexend', sans-serif;
+    position: relative;
+    z-index: 1;
+}
+
+.skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin: 0 0 12px;
+    letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    color: #bdbdbd;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Dashboard Control Panel */
+.dashboard-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 50px;
+}
+
+/* Search Bar */
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    opacity: 0.6;
+}
+
+#skill-search {
+    width: 100%;
+    padding: 14px 20px 14px 48px;
+    background: rgba(15, 15, 15, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 15px;
+    font-family: 'Lexend', sans-serif;
+    backdrop-filter: blur(10px);
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+#skill-search:focus {
+    border-color: #00ff88;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.25);
+}
+
+#skill-search::placeholder {
+    color: #757575;
+}
+
+/* Category Filter Tabs */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #bdbdbd;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Lexend', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.filter-btn:hover {
+    color: #ffffff;
+    border-color: rgba(0, 255, 136, 0.4);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: rgba(0, 255, 136, 0.12);
+    color: #00ff88;
+    border-color: #00ff88;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+    perspective: 1000px; /* Enables 3D tilt perspective */
+}
+
+/* Interactive Glassmorphism Skill Card */
+.skill-card {
+    background: rgba(15, 15, 15, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.15s ease-out, border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    position: relative;
+    opacity: 1;
+}
+
+.skill-card.hide {
+    opacity: 0;
+    transform: scale(0.9) !important;
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.skill-card:hover {
+    border-color: rgba(0, 255, 136, 0.4);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 255, 136, 0.18);
+}
+
+.card-icon {
+    font-size: 36px;
+    margin-bottom: 14px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover .card-icon {
+    transform: translateZ(20px) scale(1.1);
+}
+
+.skill-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #ffffff;
+    transform: translateZ(10px);
+}
+
+.skill-description {
+    font-size: 13px;
+    color: #bdbdbd;
+    line-height: 1.55;
+    margin: 0;
+    transform: translateZ(5px);
+}
+
+/* No Search Results Styling */
+.no-results {
+    text-align: center;
+    padding: 60px 0;
+    color: #bdbdbd;
+    font-size: 16px;
+}
+
+.no-results.hide {
+    display: none;
+}
+
+/* Modal Popup Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-card {
+    background: rgba(18, 20, 26, 0.95);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    border-radius: 24px;
+    max-width: 500px;
+    width: 100%;
+    padding: 32px;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 255, 136, 0.15);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.hide .modal-card {
+    transform: translateY(20px);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 22px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close:hover {
+    background: rgba(255, 0, 85, 0.2);
+    border-color: #ff0055;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.modal-icon {
+    font-size: 42px;
+}
+
+.modal-title {
+    font-size: 24px;
+    margin: 0;
+    color: white;
+}
+
+.modal-category {
+    font-size: 12px;
+    color: #00ff88;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.modal-description {
+    color: #bdbdbd;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.modal-section {
+    margin-bottom: 18px;
+}
+
+.modal-section h4 {
+    margin: 0 0 8px;
+    font-size: 13px;
+    color: #00f2fe;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.modal-section p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.modal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.modal-tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 36px;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
