@@ -13,7 +13,7 @@
         x: -1000,
         y: -1000,
         radius: 160
-    };
+    }; 
 
     function resize() {
         const parent = canvas.parentElement;
