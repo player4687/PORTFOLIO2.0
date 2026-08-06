@@ -39,6 +39,20 @@ const projectsData = [
     demoUrl: "https://flashmind-d4489.web.app/",
     githubUrl: "https://github.com/player4687/"
   },
+  { 
+    id: "AETHER | WeatherWeb", 
+     category: "web", // Matches data-filter="web"
+    title: "Weather Forecasting Web.",
+    description: "A fast, easy to use weather forecasting website which can provide high quality with high accurcay.",
+    mediaType: "image", // Options: "image" or "video"
+    mediaSrc: "weathera.png",
+    mediaTag: "Web App",
+    technologies: ["HTML5", "CSS3", "JavaScript", "weatherapi", "Netlify"],
+    blogUrl: "https://docs.google.com/document/d/1H_WxTMBZXwVBaohy0-y9DFOpXGttyga8L-sS_ZuM1bE/edit?usp=sharing",
+    demoUrl: "https://shimmering-otter-65246a.netlify.app/",
+    githubUrl: "https://github.com/player4687/"
+  },
+    
 
   // --- CATEGORY 2: BOTS & SOFTWARE ---
   {
